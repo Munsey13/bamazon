@@ -65,16 +65,32 @@ function messagesToAsk(){
                 chosenID = res[i];
               //  console.log("This is working");
             }
-        }
+            }
             if (parseInt(answer.Units) < chosenID.stock_quantity) {
                 console.log("Your order has been receieved");
                 let newStock = chosenID.stock_quantity - parseInt(answer.Units);
+                connection.query("UPDATE products SET ? WHERE ?",
+                [
+                {
+                    newStock: stock_quantity
+                },
+                {
+                    chosenID: id
+                },    
+                ],
+                    
+                
+                function(err,res){
+                    if (err) throw err;
+                    console.log(res.affectedRows + "Stock Updated!\n");
+
+                });
                 console.log(newStock);
             } else{
                 console.log("Insufficient quantity! Please enter ID and Stock Quantity");
             }
             
-            
+               
         });
         
         
