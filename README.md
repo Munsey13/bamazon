@@ -3,11 +3,17 @@ The goal what to create a store-like interface with MySQL and Node.js.
 --------------------
 ### What It Does
 `bamazonCustomer.js`
+
     * Displays all the product in the store.
+
     * Prompts the customer with what they would like to buy using the ID of the product.
+
     * Then asks the customer for the quantity of that product they want.
+
         * Then it checks if the store has that amount instock, if it does it will return with "order has been recieved" and show the customer the total price.
-        * If their is not enought stock in the store then the customer will be told "Insufficient quantity! Please enter ID and Stock Quantity Again"
+
+        * If their is not enought stock in the store then the customer will be told "Insufficient quantity! Please enter ID and Stock Quantity Again".
+
         * If the order goes through then the MySQL database will be updated with the new available stock amount for that product.
 --------------------
 ### Results
