@@ -90,7 +90,8 @@ function startProgram() {
                             if (err) throw err;
 
                             if (parseInt(answer.Units) >= 1) {
-                                console.log(`Your total purchase price comes to $${parseInt(answer.Units) * parseInt(chosenID.price)}. `)
+                                console.log(`Your total purchase price comes to $${parseInt(answer.Units) * parseInt(chosenID.price)}. `);
+                                
                             };
                             startAgain();
 
@@ -120,7 +121,7 @@ function startAgain() {
         .then(function (response) {
     
             if (response.Restart === "Yes" || response.Restart === "yes") {
-                startProgram();
+                displayItems();
             } else {
                 connection.end();
             }
