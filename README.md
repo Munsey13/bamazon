@@ -2,6 +2,7 @@
 The goal what to create a store-like interface with MySQL and Node.js.
 --------------------
 ### What It Does
+
 1.    `bamazonCustomer.js`
 
     * Displays all the product in the store.
