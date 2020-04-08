@@ -1,5 +1,5 @@
 # bamazon
-The goal what to create a store-like interface with MySQL and Node.js.
+The goal was to create a store-like interface with MySQL and Node.js.
 --------------------
 ### What It Does
 
